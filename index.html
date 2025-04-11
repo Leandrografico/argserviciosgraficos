@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function mostrarFechaYHora() {
+            const fecha = new Date();
+            document.getElementById("fecha").textContent = fecha.toLocaleDateString();
+            document.getElementById("hora").textContent = fecha.toLocaleTimeString();
+        }
+        setInterval(mostrarFechaYHora, 1000);
+    </script>
+</head>
+<body onload="mostrarFechaYHora()">
+    <h1>Fecha y Hora Actual</h1>
+    <p>Fecha: <span id="fecha"></span></p>
+    <p>Hora: <span id="hora"></span></p>
+</body>
+</html>
